@@ -27,9 +27,13 @@ public class SmplTest {
     }
 
     @Test
-    void simple(){
-        LOG.info("Oo");
+    void test(){
+        LOG.info("test");
     }
 
+    @Test
+    void test2(){
+        LOG.info("test2");
+    }
 }
 
