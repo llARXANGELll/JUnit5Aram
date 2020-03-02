@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory;
 
 @Tag("OneTest")
 @DisplayName("Первый простой тест")
-public class SmplTest {
-    private static final Logger LOG = LoggerFactory.getLogger(SmplTest.class);
+public class ParameterizedTest {
+    private static final Logger LOG = LoggerFactory.getLogger(ParameterizedTest.class);
 
     @BeforeAll
     static void beforeall(){
@@ -28,6 +28,7 @@ public class SmplTest {
     void afterea(){
         LOG.info("afterea");
     }
+
 
     @DisplayName("Первый простой тест")
     @Test
