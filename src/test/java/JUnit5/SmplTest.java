@@ -3,7 +3,7 @@ package JUnit5;
 import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+@DisplayName("Класс")
 public class SmplTest {
     private static final Logger LOG = LoggerFactory.getLogger(SmplTest.class);
 
@@ -26,11 +26,13 @@ public class SmplTest {
         LOG.info("afterea");
     }
 
+    @DisplayName("Первый простой тест")
     @Test
     void test(){
         LOG.info("test");
     }
 
+    @DisplayName("Второй простой тест")
     @Test
     void test2(){
         LOG.info("test2");
