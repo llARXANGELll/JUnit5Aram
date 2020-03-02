@@ -4,9 +4,7 @@ import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Tag("OneTest")
-@DisplayName("Первый простой тест")
-public class SmplTest {
+public class SimTest {
     private static final Logger LOG = LoggerFactory.getLogger(SmplTest.class);
 
     @BeforeAll
