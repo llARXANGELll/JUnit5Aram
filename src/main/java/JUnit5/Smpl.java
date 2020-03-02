@@ -1,6 +1,9 @@
+package JUnit5;
+
 import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 public class Smpl {
     private static final Logger LOG = LoggerFactory.getLogger(Smpl.class);
