@@ -35,6 +35,7 @@ public class SmplTest {
         LOG.info("test");
     }
 
+    @Tag("Test2Excl")
     @DisplayName("Второй простой тест")
     @Test
     void test2(){

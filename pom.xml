@@ -51,6 +51,7 @@
         <version>${maven-surefire-plugin.version}</version>
         <configuration>
           <groups>OneTest</groups>
+          <excludedGroups>Test2Excl</excludedGroups>
         </configuration>
       </plugin>
     </plugins>
