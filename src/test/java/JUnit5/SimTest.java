@@ -17,8 +17,8 @@ public class SimTest {
         LOG.info("befor");
     }
 
-    static  @AfterAll
-    void afteral(){
+    @AfterAll
+     static void afteral(){
         LOG.info("afteral");
     }
 
