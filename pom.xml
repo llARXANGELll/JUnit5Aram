@@ -31,6 +31,12 @@
     </dependency>
 
     <dependency>
+      <groupId>com.tngtech.java</groupId>
+      <artifactId>junit-dataprovider</artifactId>
+      <version>1.10.0</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>${slf4j-log4j12.version}</version>
@@ -57,7 +63,7 @@
         <version>${maven-surefire-plugin.version}</version>
         <configuration>
           <groups>OneTest</groups>
-<!--          <excludedGroups>Test2Excl</excludedGroups>-->
+          <excludedGroups>Test2Excl</excludedGroups>
         </configuration>
       </plugin>
     </plugins>
