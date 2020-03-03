@@ -1,32 +1,38 @@
 package JUnit5;
 
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.runner.RunWith;
 
 import org.junit.runners.Parameterized;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Arrays;
+
+import static org.junit.Assert.assertEquals;
 
 
 @Tag("OneTest")
-@RunWith(Parameterized.class)
-@DisplayName("Дата драйвер")
+@DisplayName("Параметрезированный тест")
 public class DataProviderTest {
 
-    @Parameterized.Parameters
-    public static Object[][] sumTestData() {
-        return new Object[][]{
-                {"Nasty", 25},
-                {"Vera", 50},
+    public static final Logger LOG = LoggerFactory.getLogger(DataProvider.class);
+
+    @DataProvider
+    public static Object[][] dataProvider(){
+        return new Object[][] {
+                {"Nasty", 55},
+                {"Masha", 19},
         };
     }
-
     @Test
-    @Before
-    public void dataProviderTest(String name, int age) {
-        System.out.println(name + " " + age);
+    @UseDataProvider("dataProvider")
+    public void tesnIn(String name, int age) {
+        String print = String.format("Имя: %s | Вззраст: %d", name, age);
+        System.out.println(print);
     }
-}
