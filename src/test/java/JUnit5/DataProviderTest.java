@@ -1,22 +1,22 @@
 package JUnit5;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.runner.RunWith;
 
-import com.tngtech.java.junit.dataprovider.DataProvider;
-import com.tngtech.java.junit.dataprovider.DataProviderRunner;
-import com.tngtech.java.junit.dataprovider.UseDataProvider;
+import org.junit.runners.Parameterized;
 
 
 @Tag("OneTest")
-@RunWith(DataProviderRunner.class)
+@RunWith(Parameterized.class)
 @DisplayName("Дата драйвер")
 public class DataProviderTest {
 
-
-    @DataProvider
+    @Parameterized.Parameters
     public static Object[][] sumTestData() {
         return new Object[][]{
                 {"Nasty", 25},
@@ -25,7 +25,7 @@ public class DataProviderTest {
     }
 
     @Test
-    @UseDataProvider("sumTestData")
+    @Before
     public void dataProviderTest(String name, int age) {
         System.out.println(name + " " + age);
     }
