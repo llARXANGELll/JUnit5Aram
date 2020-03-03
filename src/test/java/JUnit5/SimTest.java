@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class SimTest {
-    private static final Logger LOG = LoggerFactory.getLogger(ParameterizedTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(TwoTest.class);
 
     @BeforeAll
     static void beforeall(){

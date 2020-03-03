@@ -4,10 +4,10 @@ import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Tag("OneTest")
+
 @DisplayName("Первый простой тест")
-public class ParameterizedTest {
-    private static final Logger LOG = LoggerFactory.getLogger(ParameterizedTest.class);
+public class TwoTest {
+    private static final Logger LOG = LoggerFactory.getLogger(TwoTest.class);
 
     @BeforeAll
     static void beforeall(){
