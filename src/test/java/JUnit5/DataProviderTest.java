@@ -13,26 +13,30 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
+import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
 
 
 @Tag("OneTest")
 @DisplayName("Параметрезированный тест")
+@RunWith(value = Parameterized.class)
 public class DataProviderTest {
 
-    public static final Logger LOG = LoggerFactory.getLogger(DataProvider.class);
+    private int number;
 
-    @DataProvider
-    public static Object[][] dataProvider(){
-        return new Object[][] {
-                {"Nasty", 55},
-                {"Masha", 19},
-        };
+    public DataProviderTest(int number) {
+        this.number = number;
     }
+
+    @Parameterized.Parameters
+    public static Collection<Object[]> data() {
+        Object[][] data = new Object[][] { { 1 }, { 2 }, { 3 }, { 4 } };
+        return Arrays.asList(data);
+    }
+
     @Test
-    @UseDataProvider("dataProvider")
-    public void tesnIn(String name, int age) {
-        String print = String.format("Имя: %s | Вззраст: %d", name, age);
-        System.out.println(print);
+    public void pushTest() {
+        System.out.println("Parameterized Number is : " + number);
     }
+}
