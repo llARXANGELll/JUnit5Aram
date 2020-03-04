@@ -1,8 +1,10 @@
 package JUnit5;
 
+import org.junit.Before;
+import org.junit.Test;
 import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
-
+import org.junit.runners.Parameterized;
 
 
 @Tag("OneTest")
@@ -10,13 +12,18 @@ import org.junit.runner.RunWith;
 public class DataProviderTest {
 
 
-    @BeforeAll
-    static void beforeall() {
+    @Parameterized.Parameter
+    private Object[][]dataprov(){
+        return Object[][]{
+            {"Vas", 3},
+            {"Pet", 1},
+        }
     }
-
     @Test
-    void befor() {
-        System.out.println("233");
+    @Parameterized.Parameters(name = "dataprov")
+    public void paramtest(String name, int age){
+        String output = String.format("Name: '%s' | Age '%d'", name, age);
+        System.out.println();
     }
-
 }
+
