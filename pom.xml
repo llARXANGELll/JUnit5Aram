@@ -31,12 +31,6 @@
     </dependency>
 
     <dependency>
-      <groupId>com.tngtech.java</groupId>
-      <artifactId>junit-dataprovider</artifactId>
-      <version>1.10.0</version>
-    </dependency>
-
-    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>${slf4j-log4j12.version}</version>
@@ -47,12 +41,14 @@
       <version>4.12</version>
       <scope>compile</scope>
     </dependency>
+
     <dependency>
-      <groupId>com.tngtech.java</groupId>
-      <artifactId>junit-dataprovider</artifactId>
-      <version>1.10.0</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>${junit-jupiter.version}</version>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
 
   <build>
