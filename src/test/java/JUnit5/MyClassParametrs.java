@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-@Tag("OneTest")
+@Tag("Test2Excl")
 @RunWith(Parameterized.class)
 public class MyClassParametrs {
     @ParameterizedTest
