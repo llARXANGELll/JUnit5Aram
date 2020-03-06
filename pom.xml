@@ -56,8 +56,8 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
         <configuration>
-          <groups>OneTest</groups>
-          <excludedGroups>Test2Excl</excludedGroups>
+          <groups>Start</groups>
+          <excludedGroups>Stop</excludedGroups>
         </configuration>
       </plugin>
     </plugins>

@@ -11,7 +11,7 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 
 
-@Tag("OneTest")
+@Tag("Start")
 @DisplayName("Дата драйвер")
 @RunWith(Parameterized.class)
 public class DataProviderTest {
