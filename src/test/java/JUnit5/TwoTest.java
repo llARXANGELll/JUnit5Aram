@@ -3,9 +3,11 @@ package JUnit5;
 import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 @Tag("Test2Excl")
-public class SimTest {
-    private static final Logger LOG = LoggerFactory.getLogger(SimTest.class);
+@DisplayName("Первый простой тест")
+public class TwoTest {
+    private static final Logger LOG = LoggerFactory.getLogger(TwoTest.class);
 
     @BeforeAll
     static void beforeall(){
@@ -17,8 +19,8 @@ public class SimTest {
         LOG.info("befor");
     }
 
-    @AfterAll
-     static void afteral(){
+    static  @AfterAll
+    void afteral(){
         LOG.info("afteral");
     }
 
@@ -27,16 +29,20 @@ public class SimTest {
         LOG.info("afterea");
     }
 
+
     @DisplayName("Первый простой тест")
     @Test
     void test(){
         LOG.info("test");
     }
 
+    @Tag("Test2Excl")
     @DisplayName("Второй простой тест")
     @Test
     void test2(){
         LOG.info("test2");
     }
+
+
 }
 
