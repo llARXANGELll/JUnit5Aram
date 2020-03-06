@@ -6,24 +6,39 @@ import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
+import java.util.Arrays;
 
-@Tag("OneTest")
+import static org.junit.Assert.assertEquals;
+
+
+@Tag("Test2Excl")
 @DisplayName("Дата драйвер")
+@RunWith(Parameterized.class)
 public class DataProviderTest {
+    private int valueA;
+    private int valueB;
+    private int expected;
 
-
-    @Parameterized.Parameter
-    private Object[][]dataprov(){
-        return Object[][]{
-            {"Vas", 3},
-            {"Pet", 1},
-        }
+    public DataProviderTest(int valueA, int valueB, int expected) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+        this.expected = expected;
     }
+
+    @Parameterized.Parameters(name = "{index}:sumOf({0}+{1})={2}")
+    public static Iterable<Object[]> dataForTest() {
+        return Arrays.asList(new Object[][]{
+                {1, 1, 2},
+                {2, 6, 8},
+                {18, 2, 20},
+                {13, 15, 28},
+                {1, 5, 6}
+        });
+    }
+
     @Test
-    @Parameterized.Parameters(name = "dataprov")
-    public void paramtest(String name, int age){
-        String output = String.format("Name: '%s' | Age '%d'", name, age);
-        System.out.println();
+    public void paramTest() {
+        assertEquals(expected, new Calculator().getSum(valueA,valueB));
     }
 }
 
