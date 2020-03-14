@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="JUnit5Aram">
+    <test name="JUnit5Aram">
+        <classes>
+            <class name="JUnit5.TwoTest"></class>
+        </classes>
+    </test>
+</suite>
